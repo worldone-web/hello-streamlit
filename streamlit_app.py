@@ -24,3 +24,10 @@ st.select_slider('Pick a mark',['Bad','Good','Excellent'])
 st.slider('Pick a number',0,50)
 
 st.write('gender',gender)
+
+import pandas as pd
+import numpy as np
+import streamlit as st
+df= pd.DataFrame(np.random.randn(500,2)/[50,50]+[37.76,-122.4],columns=['lat','lon'])
+
+st.map(df)
